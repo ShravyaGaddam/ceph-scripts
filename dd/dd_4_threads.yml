@@ -1,0 +1,8 @@
+---
+- name: Run DD write benchmark on remote servers
+  hosts: 4threads
+  sudo: true
+  remote_user: ubuntu
+  tasks:
+  - name: DD read benchmark
+    script: /home/ubuntu/dd/4_threads.sh

@@ -1,0 +1,8 @@
+---
+- name: Run DD write benchmark on remote servers
+  hosts: 2threads
+  sudo: true
+  remote_user: ubuntu
+  tasks:
+  - name: DD write benchmark
+    shell: sudo dd if=/dev/zero of=/home/ubuntu/deleteme bs=1G count=1 oflag=direct 2> /home/ubuntu/dd_write_2thread.txt

@@ -1,0 +1,8 @@
+---
+- name: Run DD write benchmark on remote servers
+  hosts: 8threads
+  sudo: true
+  remote_user: ubuntu
+  tasks:
+  - name: DD read benchmark
+    script: /home/ubuntu/dd/8_threads.sh
